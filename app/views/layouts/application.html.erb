@@ -9,11 +9,8 @@
   </head>
 
   <body>
-    <% flash.each do |name, msg| %>
-      <ul>
-        <li><%= msg %></li>
-      </ul>
-    <% end %>
+    <!--now the render's directory is searching at /articles instead of /layouts, so we should make it search the /layouts directory-->
+    <%= render 'layouts/messages'%>
     <%= yield %>
   </body>
 </html>

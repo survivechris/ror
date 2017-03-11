@@ -10,7 +10,11 @@
 
   <body>
     <!--now the render's directory is searching at /articles instead of /layouts, so we should make it search the /layouts directory-->
+    <%= render 'layouts/navigation'%>
     <%= render 'layouts/messages'%>
+    <div class=container>
     <%= yield %>
+    </div>
+    <%= render 'layouts/footer'%>
   </body>
 </html>

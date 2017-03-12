@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     if @article.save
       # use flash to pass some message to the very next action
-      flash[:notice] = 'the article is successfully created'
+      flash[:success] = 'the article is successfully created'
       # after saving the article obj to DB
       # it would render someting to users
       redirect_to article_path(@article)
@@ -35,7 +35,7 @@ class ArticlesController < ApplicationController
   def update
     if @article.update(article_params)
       # use flash to pass some message to the very next action
-      flash[:notice] = 'the article is successfully editted'
+      flash[:success] = 'the article is successfully editted'
       # after saving the article obj to DB
       # it would render someting to users
       redirect_to article_path(@article)
@@ -46,7 +46,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.destroy
-    flash[:notice] = 'the article is successfully deleted.'
+    flash[:danger] = 'the article is successfully deleted.'
     redirect_to articles_path
   end
 

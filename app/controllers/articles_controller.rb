@@ -15,6 +15,8 @@ class ArticlesController < ApplicationController
     # render plain: params[:article].inspect
     # get the article obj from article_para
     @article = Article.new(article_params)
+    # the user is hard-coded temporarily before authentication features
+    @article.user = User.first
     if @article.save
       # use flash to pass some message to the very next action
       flash[:success] = 'the article is successfully created'

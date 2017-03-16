@@ -11,4 +11,5 @@ class User < ActiveRecord::Base
             length: { maximum: 105 }
 
   has_many :articles
+  has_secure_password
 end

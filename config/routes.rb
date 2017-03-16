@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   # add all the routes for articles
   resources :articles
 
+  # signup user page
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
+
 end

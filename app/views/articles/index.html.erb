@@ -1,2 +1,8 @@
 <h1 class='center'>List of Articles</h1>
-<%= render 'article', obj: @all_articles%>
+<div class='center'>
+  <%= will_paginate %>
+</div>
+<%= render 'article', obj: @articles%>
+<div class='center'>
+  <%= will_paginate %>
+</div>

@@ -12,6 +12,8 @@ class ApplicationController < ActionController::Base
     !current_user.nil?
   end
 
+  # require_user is not used by view
+  # so, it do not have to be put into helper_method
   def require_user
     unless logged_in?
       flash[:danger] = 'You must log in to perform this action!'

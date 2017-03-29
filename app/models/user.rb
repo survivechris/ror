@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
             uniqueness: { case_sensitive: false },
             format: { with: EMAIL_REGEX},
             length: { maximum: 105 }
-
-  has_many :articles
+  # associated records should be deleted when the owner is deleted
+  has_many :articles, dependent: :destroy
   has_secure_password
 end

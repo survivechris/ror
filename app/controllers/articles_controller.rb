@@ -62,7 +62,7 @@ class ArticlesController < ApplicationController
   def article_params
     # sanitize user input by #ActionController::Parameters.require
     # and permit method
-    params.require(:article).permit(:title, :description)
+    params.require(:article).permit(:title, :description, category_ids: [])
   end
 
   def require_same_user

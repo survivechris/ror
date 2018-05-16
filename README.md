@@ -1,28 +1,23 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+* This web application is deployed on Heroku as followed
+https://chris-cycle-in-taiwan.herokuapp.com/
 
 * Ruby version
-
-* System dependencies
-
-* Configuration
+ruby 2.3.3 on Rails 5.0.2
 
 * Database creation
+Developed on Mysql version 14.14
+Deployed on Heroku
 
 * Database initialization
-
-* How to run the test suite
+with user: great
 
 * Services (job queues, cache servers, search engines, etc.)
+This an web application for users to share their experience cycling Taiwan island.
 
-* Deployment instructions
+* Development instructions
+bundle install --without production
+rake db:create
+rake db:migrate
 
-* ...
-# ror
-# second commit
-# third commit
-# fourth commit
+
+
